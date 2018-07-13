@@ -28,7 +28,12 @@ module.exports.routes = {
     view: 'pages/homepage'
   },
   'POST /register': 'AuthController.register',
-  'POST /login': 'AuthController.login'
+  'POST /login': 'AuthController.login',
+  'POST /loginJWT': 'AuthController.loginJWT',
+  '/articles': 'ArticlesController.getAll',
+  'POST /articles/create': 'ArticlesController.create',
+  'POST /articles/update': 'ArticlesController.update',
+  '/articles/update/:id': 'ArticlesController.delete',
 
   /***************************************************************************
    *                                                                          *

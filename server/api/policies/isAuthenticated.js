@@ -1,9 +1,6 @@
 const passport = require('passport');
 
-module.exports = auth = (req, res, next) => {
-  // const isAllowed = role => allowed.indexOf(role) > -1;
-
-  // return a middleware
+module.exports = (req, res, next) => {
   passport.authenticate('jwt', {
     session: false
   }, function (err, user, info) {
@@ -18,5 +15,4 @@ module.exports = auth = (req, res, next) => {
       next();
     }
   })(req, res, next);
-  //next();
 };
