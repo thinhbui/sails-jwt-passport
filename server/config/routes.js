@@ -29,7 +29,6 @@ module.exports.routes = {
   },
   'POST /register': 'AuthController.register',
   'POST /login': 'AuthController.login',
-  'POST /loginJWT': 'AuthController.loginJWT',
   '/articles': 'ArticlesController.getAll',
   'POST /articles/create': 'ArticlesController.create',
   'POST /articles/update': 'ArticlesController.update',

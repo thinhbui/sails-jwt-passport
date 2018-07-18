@@ -36,7 +36,7 @@ module.exports = {
   },
   getAll: (req, res) => {
     Articles.find({}).exec((err, articles) => {
-      console.log('articles', articles);
+      // console.log('articles', articles);
       if (err) res.send('Database error: ' + err)
       res.json(articles);
     })
