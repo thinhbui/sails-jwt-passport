@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
   if (token) {
     jwt.verify(token, 'secret').then((err, decode) => {
       console.log('decode', decode);
-    })
+    });
     next();
   } else {
     res.json('Authorization is required');
